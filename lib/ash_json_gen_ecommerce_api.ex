@@ -5,9 +5,10 @@ defmodule API.Gen.Ecommerce do
     use Ash.Domain,
       validate_config_inclusion?: false
 
-      @petjson "test/ecommerceapi/pet_store.json" |> File.read!() |> Jason.decode!()
-      @json "test/ecommerceapi/newecommerceapi.json" |> File.read!() |> Jason.decode!()
-      @json_schema "test/ecommerceapi/newecommerceapi.json" |> File.read!() |> Jason.decode!() |> ExJsonSchema.Schema.resolve()
+      # /home/niccolox/Projects/devekko.store/store/lib/store/deps/ash_json_gen_ecommerce_api/source/ecommerceapi
+      #@petjson "/lib/store/deps/ash_json_gen_ecommerce_api/source/ecommerceapi/ecommerceapi/pet_store.json" |> File.read!() |> Jason.decode!()
+      @json "priv/ecommerceapi/newecommerceapi.json" |> File.read!() |> Jason.decode!()
+      #@json_schema "/lib/store/deps/ash_json_gen_ecommerce_api/source/ecommerceapi//ecommerceapi/newecommerceapi.json" |> File.read!() |> Jason.decode!() |> ExJsonSchema.Schema.resolve()
 
 
   defmodule Domain do
