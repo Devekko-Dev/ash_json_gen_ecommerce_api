@@ -178,6 +178,10 @@ defmodule API.Gen.Ecommerce do
         object_type: "components.schemas.EcommerceStore",
         primary_key: "id",
         # entity_path: "",
+        ash_slug: true,
+        ash_json: true,
+        ash_graphql: true,
+        ash_admin: true,
         fields: [
           id: [
             filter_handler: {:place_in_csv_list, ["id"]}
@@ -245,7 +249,7 @@ defmodule API.Gen.Ecommerce do
     |> Enum.map(fn {resource, code} ->
       # IO.inspect(resource)
       # IO.inspect(code)
-      # IO.inspect(Code.eval_string(code))
+      IO.inspect(Code.eval_string(code))
       # Code.eval_string(code)
       resource_down = to_string(resource) |> Macro.underscore()
 

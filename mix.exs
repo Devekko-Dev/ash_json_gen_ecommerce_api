@@ -11,6 +11,11 @@ defmodule AshJsonGenEcommerceApi.MixProject do
     ]
   end
 
+  defp copy_extra_files(release) do
+    File.cp_r("priv/ecommerceapi", Path.join(release.path, "priv"))
+    release
+  end
+
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
