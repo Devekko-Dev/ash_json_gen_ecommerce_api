@@ -182,6 +182,7 @@ defmodule API.Gen.Ecommerce do
         ash_json: true,
         ash_graphql: true,
         ash_admin: true,
+        ash_state_machine: true,
         fields: [
           id: [
             filter_handler: {:place_in_csv_list, ["id"]}
